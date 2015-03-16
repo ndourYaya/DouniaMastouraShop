@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dounia Mastoura Shop</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dm_main">DmMainActivity</string>
+    <string name="tv_tittle_categories">Choisissez votre categorie</string>
+    <string name="title_activity_dm_view_pager_product">DmViewPagerProductActivity</string>
+    <string name="tv_tittle_slide">Glissez pour changer de categorie</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dm_product_detail">DmProductDetailActivity</string>
+    <string name="title_activity_dm_creation">DmCreationActivity</string>
+    <string name="title_activity_dm_basket">DmBasketActivity</string>
+
+</resources>

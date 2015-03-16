@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Touslesarticles">
+        <item>Manteau asymétrique</item>
+        <item>Abaya 2 en 1 pull</item>
+        <item>Abaya 2 en 1</item>
+        <item>Abaya collier pull</item>
+        <item>Abaya</item>
+        <item>Abaya asymétrique</item>
+        <item>Djellaba</item>
+        <item>Tunique collier pull</item>
+        <item>Tunique asymétrique</item>
+        <item>Tunique longue</item>
+        <item>Jupe</item>
+        <item>Sarouel</item>
+        <item>Robe Dubaî</item>
+        <item>Robe ceinture</item>
+        <item>Parrure Luna</item>
+        <item>Parrure Ines</item>
+        <item>Parrure Linda</item>
+        <item>Courrone selma</item>
+        <item>Gilet gris</item>
+    </string-array>
+
+    <string-array name="Manteaux">
+        <item>Manteau asymétrique</item>
+    </string-array>
+
+    <string-array name="Tuniques">
+        <item>Tunique collier pull</item>
+        <item>Tunique asymétrique</item>
+        <item>Tunique longue</item>
+    </string-array>
+
+    <string-array name="Jupes">
+        <item>Jupe</item>
+    </string-array>
+
+    <string-array name="Sarouels">
+        <item>Sarouel</item>
+    </string-array>
+
+    <string-array name="Robes">
+        <item>Robe Dubaî</item>
+        <item>Robe ceinture</item>
+    </string-array>
+
+    <string-array name="Bijoux">
+        <item>Parrure Luna</item>
+        <item>Parrure Ines</item>
+        <item>Parrure Linda</item>
+        <item>Courrone selma</item>
+    </string-array>
+
+
+    <string-array name="Gilets">
+        <item>Gilet gris</item>
+    </string-array>
+
+
+</resources>
