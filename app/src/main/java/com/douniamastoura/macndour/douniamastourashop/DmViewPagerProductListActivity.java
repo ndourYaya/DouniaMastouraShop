@@ -8,6 +8,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 
 import com.douniamastoura.macndour.DmModels.DmArticlesModel;
 import com.douniamastoura.macndour.DmModels.DmCategoriesModel;
@@ -54,7 +55,7 @@ public class DmViewPagerProductListActivity extends ActionBarActivity implements
         {
 			/*accès base de données pour récuperer la liste des articles par categories*/
             LoadArticlesByCategoriesTask task = new LoadArticlesByCategoriesTask(this,i);
-
+            Log.d("List view pager", "chargement de la liste: " + catName.get(i));
             try {
                 itmLst = task.execute().get();
             } catch (InterruptedException e) {

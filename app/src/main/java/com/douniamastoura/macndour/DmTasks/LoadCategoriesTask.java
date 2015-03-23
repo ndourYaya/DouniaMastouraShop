@@ -24,7 +24,7 @@ public class LoadCategoriesTask extends AsyncTask<Void, Void, ArrayList<DmCatego
 
     private DmCategoriesParser catParser = new DmCategoriesParser();
     private ArrayList<DmCategoriesModel> catList;
-    private static String url_all_categories = "http://192.168.0.32:8888/android_connect/get_all_categories.php";
+    private static String url_all_categories = "http://dounia-mastoura.science/android_connect/get_all_categories.php";
     JSONParser jParser = new JSONParser();
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_CATEGORIES = "Categories";
@@ -61,7 +61,7 @@ public class LoadCategoriesTask extends AsyncTask<Void, Void, ArrayList<DmCatego
         JSONObject json = jParser.makeHttpRequest(url_all_categories, "GET", params);
 
         // Check your log cat for JSON reponse
-        Log.d("All Products: ", json.toString());
+
 
         try {
             // Checking for SUCCESS TAG

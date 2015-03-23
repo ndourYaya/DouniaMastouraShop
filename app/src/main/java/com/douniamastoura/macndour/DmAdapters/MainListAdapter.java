@@ -76,12 +76,12 @@ public class MainListAdapter extends BaseAdapter {
         }
 
 
-        int id = mContext.getResources().getIdentifier(imgIds.get(position),"drawable",mContext.getPackageName());
+        /*int id = mContext.getResources().getIdentifier(imgIds.get(position),"drawable",mContext.getPackageName());
         Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(),id);
-        Bitmap thumbBitmap = ThumbnailUtils.extractThumbnail(bitmap, 300, 200);
+        Bitmap thumbBitmap = ThumbnailUtils.extractThumbnail(bitmap, 300, 200);*/
 
 
-        viewHolder.imgView.setImageBitmap(thumbBitmap);
+        //viewHolder.imgView.setImageBitmap(thumbBitmap);
         viewHolder.txtView.setText(txtDescriptions.get(position));
         return convertView;
     }
