@@ -30,15 +30,62 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+       >
 
-        <TextView
-            android:id="@+id/tv_product_colors"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="couleurs disponibles ..."/>
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_product_colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Couleur:"/>
+            <Spinner
+                android:layout_marginRight="5dp"
+                android:id="@+id/color_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taille:"/>
+            <Spinner
+                android:layout_marginRight="5dp"
+                android:id="@+id/size_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantité:"/>
+
+            <Spinner
+                android:layout_marginRight="5dp"
+                android:id="@+id/qte_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
 
         </LinearLayout>
+
+        </LinearLayout>
+
 
     <TextView
         android:id="@+id/tv_product_description"
