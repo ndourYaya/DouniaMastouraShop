@@ -21,7 +21,8 @@
         </activity>
         <activity
             android:name=".DmMainActivity"
-            android:label="@string/title_activity_dm_main" >
+            android:label="@string/title_activity_dm_main"
+            android:configChanges="screenSize|orientation">
         </activity>
         <activity
             android:name=".DmViewPagerProductListActivity"

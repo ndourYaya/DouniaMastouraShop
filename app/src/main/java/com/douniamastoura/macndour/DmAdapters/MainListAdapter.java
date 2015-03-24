@@ -22,8 +22,8 @@ import java.util.ArrayList;
  */
 public class MainListAdapter extends BaseAdapter {
 
-    private Context mContext;
-    private ArrayList<String> imgIds;
+    private static Context mContext;
+    private static ArrayList<String> imgIds;
     private  ArrayList<String> txtDescriptions;
 
     static class ViewHolder
@@ -75,14 +75,40 @@ public class MainListAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
+        viewHolder.position = position;
+        int id = mContext.getResources().getIdentifier(imgIds.get(position),"drawable",mContext.getPackageName());
+        new ThumbnailTask(position, viewHolder,id).execute();
 
-        /*int id = mContext.getResources().getIdentifier(imgIds.get(position),"drawable",mContext.getPackageName());
-        Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(),id);
-        Bitmap thumbBitmap = ThumbnailUtils.extractThumbnail(bitmap, 300, 200);*/
-
-
-        //viewHolder.imgView.setImageBitmap(thumbBitmap);
         viewHolder.txtView.setText(txtDescriptions.get(position));
         return convertView;
+    }
+
+    private static class ThumbnailTask extends AsyncTask<Void,Void,Bitmap> {
+        private int mPosition;
+        private ViewHolder mHolder;
+        private int id;
+
+        public ThumbnailTask(int position, ViewHolder holder,int id) {
+            mPosition = position;
+            mHolder = holder;
+            this.id =id;
+        }
+
+
+        @Override
+        protected Bitmap doInBackground(Void... params) {
+
+            Bitmap bitmap = BitmapFactory.decodeResource(mContext.getResources(),id);
+            Bitmap thumbBitmap = ThumbnailUtils.extractThumbnail(bitmap, 300, 300);
+
+            return thumbBitmap;
+        }
+
+        @Override
+        protected void onPostExecute(Bitmap bitmap) {
+            if (mHolder.position == mPosition) {
+                mHolder.imgView.setImageBitmap(bitmap);
+            }
+        }
     }
 }

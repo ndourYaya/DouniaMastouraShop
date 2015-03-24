@@ -62,7 +62,7 @@ public class LoadArticlesByCategoriesTask extends AsyncTask<Void, Void, ArrayLis
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("Id", Integer.toString(catNum)));
         // getting JSON string from URL
-        JSONObject json;
+        JSONObject json=null;
         if(catNum == 1)
             json  = jParser.makeHttpRequest(url_articles_all, "GET", params);
         else

@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="5dp">
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="5dp">
 
-    <ImageView
-        android:id="@+id/iv_product_grid_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
-        android:layout_gravity="center"/>
+	<ImageView
+		android:id="@+id/iv_product_grid_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_launcher"
+		android:layout_gravity="center"/>
 
-    <TextView
-        android:id="@+id/tv_product_grid_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="titre de la categorie"
-        android:layout_gravity="center"/>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        >
 
+        <TextView
+            android:id="@+id/tv_product_grid_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nom de l'article"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_product_grid_title"
+            android:text="20€"
+            android:textStyle="bold"/>
+    </RelativeLayout>
 </LinearLayout>
